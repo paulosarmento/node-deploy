@@ -30,12 +30,11 @@ class CreateAppointmentService {
 
     // Cria um agendamento
 
-    const appointment = appointmentsRepository.create({
+    const appointment = await appointmentsRepository.create({
       provider_id,
       date: appointmentDate,
     });
 
-    await appointmentsRepository.save(appointment);
 
     return appointment;
   }
