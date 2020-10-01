@@ -23,7 +23,7 @@ describe('UpdateUserAvatar', () => {
       name: 'Paulo Sarmento',
       email: 'fulano@example.com',
       password: '123456',
-    })
+    });
     await updateUserAvatar.execute({
       user_id: user.id,
       avatarFilename: 'avatar.jpg',
