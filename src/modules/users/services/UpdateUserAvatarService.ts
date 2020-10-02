@@ -1,6 +1,3 @@
-import path from 'path';
-import fs from 'fs';
-import uploadConfig from '@config/upload';
 import { injectable, inject } from 'tsyringe';
 
 
@@ -28,7 +25,7 @@ class UpdateUserAvatarService {
     const user = await this.usersRepository.findById(user_id);
 
     if (!user) {
-      throw new AppError('Only authenticaded users can change avatar.', 401);
+      throw new AppError('Only authenticated users can change avatar.', 401);
     }
 
     if (user.avatar) {

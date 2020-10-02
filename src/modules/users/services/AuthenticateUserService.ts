@@ -25,7 +25,7 @@ class AuthenticateUserService {
     @inject('HashProvider')
     private hashProvider: IHashProvider,
     ){}
-  public async execute ({ email, password}: IRequest): Promise<IResponse>{
+  public async execute ({ email, password }: IRequest): Promise<IResponse>{
     const user = await this.usersRepository.findByEmail(email);
 
     if(!user){
@@ -38,7 +38,7 @@ class AuthenticateUserService {
       throw new AppError('incorrect email/password combination', 401);
     }
 
-    //!Usuario autenticado
+    //! Usuário autenticado
 
     const { secret, expiresIn } = authConfig.jwt;
 
