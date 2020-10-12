@@ -1,5 +1,7 @@
 import{ Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, ManyToOne, JoinColumn } from 'typeorm';
 import User from '@modules/users/infra/typeorm/entities/User';
+
+//Eager Loading - Pesquisar
 @Entity('appointments')
 class Appointment {
   @PrimaryGeneratedColumn('uuid')
