@@ -1,7 +1,5 @@
 import { injectable, inject } from 'tsyringe';
 
-
-// import AppError from '@shared/errors/AppError';
 import IHashProvider from '../providers/HashProvider/models/IHashProvider';
 import IUsersRepository from '../repositories/IUsersRepository';
 
@@ -44,9 +42,6 @@ class UpdateProfileService {
     if (password && !old_password) {
       throw new AppError('You need to inform the old password to set a new password.');
     }
-
-
-
 
     if(password && old_password){
       const checkOldPassword = await this.hashProvider.compareHash(

@@ -1,5 +1,3 @@
-import { object } from '@hapi/joi';
-import { ObjectID } from 'typeorm';
 import ICacheProvider from '../models/ICacheProvider';
 
 interface ICacheData {
