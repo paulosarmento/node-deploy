@@ -23,7 +23,7 @@ class ListProvidersService {
 
     let users = await this.cacheProvider.recover<User[]>(`providers-list:${user_id}`);
     //! Limpar cache da aplicação
-    // let users;
+    //let users;
 
     if(!users) {
       users = await this.usersRepository.findAllProviders({
